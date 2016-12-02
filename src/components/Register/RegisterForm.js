@@ -27,12 +27,23 @@ export default class RegisterForm extends Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Repeat Password:</label>
+                    <label>Confirm Password:</label>
                     <input
                         className="form-control"
                         type="password"
                         name="repeat"
                         value={this.props.repeat}
+                        disabled={this.props.submitDisabled}
+                        onChange={this.props.onChangeHandler}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Email:</label>
+                    <input
+                        className="form-control"
+                        type="text"
+                        name="email"
+                        value={this.props.email}
                         disabled={this.props.submitDisabled}
                         onChange={this.props.onChangeHandler}
                     />
