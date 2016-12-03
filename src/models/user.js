@@ -31,10 +31,11 @@ function login(username, password, callback) {
 }
 
 // user/register
-function register(username, password, callback) {
+function register(username, password, email, callback) {
     let userData = {
         username,
-        password
+        password,
+        email
     };
 
     requester.post('user', '', userData, 'basic')

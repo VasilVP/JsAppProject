@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
 
 export default class HomePage extends Component {
     render() {
@@ -7,9 +7,11 @@ export default class HomePage extends Component {
 
         if (sessionStorage.getItem('username')) {
             if (sessionStorage.getItem('teamId')) {
-                message = <Link to={"/catalog/" + sessionStorage.getItem('teamId')}>Go to my team</Link>
+                // message = <Link to={"/catalog/" + sessionStorage.getItem('teamId')}>Go to my team</Link>
+                message = <p>You are logged in!</p>
             } else {
-                message = <p>You are currently not a member of a team. View the <Link to="/catalog">catalog</Link> to join or create one.</p>;
+               // message = <p>You are currently not a member of a team. View the <Link to="/catalog">catalog</Link> to join or create one.</p>;
+                message = <p>You are not logged in!</p>
             }
         }
         return (
